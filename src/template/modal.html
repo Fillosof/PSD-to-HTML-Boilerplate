@@ -1,0 +1,56 @@
+<div class="container-FLUID">
+<!-- Form for Email + Phone -->
+<div id="email" style="display:none;">
+    <div class="container-FLUID">
+        <h3 class="text-center">Помогите нам связаться с Вами</h3>
+
+        <form data-toggle="validator" role="form" method="post" action="contact.php">
+          <div class="form-group has-feedback">
+            <label for="inputName" class="control-label">Ваше имя:</label>
+            <input type="text" class="form-control" id="inputName" placeholder="Иван Иванович" data-error="Как мы можем к вам обращаться?" name="user_name" required>                
+            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>                
+            <div class="help-block with-errors"></div>
+          </div>
+          <div class="form-group has-feedback">
+            <label for="input-phone" class="control-label">Ваш телефон:</label>
+            <div class="input-group">
+              <span class="input-group-addon">+38</span>
+              <input type="text" pattern="^[_A-z0-9]{10}$" data-minlength="10" maxlength="10" class="form-control" id="input-phone"  placeholder="(___) ___ __ __" data-error="Укажите контактный номер для связи" name="user_phone" required>
+            </div>
+            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <div class="help-block with-errors"></div>
+          </div>
+          <div class="form-group has-feedback">
+            <label for="inputEmail" class="control-label">Ваш E-mail:</label>
+            <input type="email" class="form-control" id="inputEmail" placeholder="Email@mail.com" data-error="Введите правильный e-mail" name="user_email"  required>
+            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <div class="help-block with-errors"></div>
+          </div>
+          
+        
+          <div class="form-group text-center">
+            <button type="submit" class="btn btn-warning btn-lg">Отправить</button>
+          </div>
+        </form>
+        
+    
+        <p class="text-center"><small>Ваши данные никогда не будут переданы 3-м лицам.</small></p>
+        
+    </div>
+</div>
+
+<!-- Form for Phone -->
+
+<div id="callback" style="display:none;">
+    <div class="container-FLUID">
+        <h3 class="text-center">Пожалуйста введите Ваш телефон</h3>
+        <form action="call.php" method="post" class="phone_form">
+            <div class="user_phone">
+                <input type="tel" placeholder="(___) ___ __ __" id="user_phone" required class="rfield" name="phone"/>  
+            </div>
+            <input type="submit" class="btn btn-primary btn-submit-phone"/>
+        </form>
+        <p class="text-center"><small>Ваши данные никогда не будут переданы 3-м лицам.</small></p>
+    </div>
+</div>  
+</div>

@@ -1,0 +1,53 @@
+.email_form,
+.phone_form {
+	width: 300px;
+	margin: 25px auto;
+	position: relative;
+}
+input {
+	width: 300px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	padding: 8px 8px 8px 8px;
+	height: 40px;
+	font-size: 16px;
+}
+
+.user_phone input {
+	padding: 8px 8px 8px 36px;
+	height: 40px;
+	font-size: 16px;
+}
+
+.user_phone input:-moz-placeholder {
+	color: #363636;
+}
+.user_phone input::-webkit-input-placeholder {
+	color: #363636;
+}
+.user_phone {
+	position: relative;
+}
+.user_phone:before {
+	content: "+38";
+	display: block;
+	height: 40px;
+	color: #363636;
+	position: absolute;
+	top: 10px;
+	left: 7px;
+	font-size: 16px;
+}
+
+.btn-submit-phone {
+	height: 30px;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	width: 120px;
+    line-height: 1;
+    font-size: 16px;
+    padding: 0;
+}
+
